@@ -3,7 +3,7 @@ package com.halil.ozel.retrofitapp
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiClient {
+object ApiClient {
 
     val BASE_URL = "https://www.googleapis.com/youtube/v3/"
     private var retrofit : Retrofit? = null
