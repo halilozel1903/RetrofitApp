@@ -1,7 +1,5 @@
 # Retrofit App
 
-Retrofit kutuphanesi ve Youtube Api kullanılarak gelistirilen bir projedir
-
 ![Screenshot](retrofit.jpg)
 
 ## Projenin Amacı
