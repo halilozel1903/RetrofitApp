@@ -2,7 +2,9 @@ package com.halil.ozel.retrofitapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     val CHANNEL_ID = "UCZNZj3mkdCGJfCoKyl4bSYQ"
     var gelenVeri : PlayListData? = null
     var oynatmaListeleri : List<PlayListData.Items>? = null
+
+    var myAdapter : PlayListAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +42,21 @@ class MainActivity : AppCompatActivity() {
                 oynatmaListeleri = gelenVeri?.items
 
 
+                myAdapter = PlayListAdapter(oynatmaListeleri)
+                recyclerviewPlaylist.adapter = myAdapter
+
+                var myLayoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL,false)
+                recyclerviewPlaylist.layoutManager = myLayoutManager
+
+
+
+
+
+
+
+                supportActionBar?.setSubtitle("Toplam Liste : "+oynatmaListeleri?.size)
+
+
                 Log.e("basarili","toplam liste sayisi"+oynatmaListeleri?.size)
 
 
@@ -45,5 +64,9 @@ class MainActivity : AppCompatActivity() {
 
 
         })
+
+
+
+
     }
 }
