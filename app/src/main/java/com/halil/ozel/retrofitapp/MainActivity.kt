@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
 
     val API_KEY = "AIzaSyAVH-8d2L9i23FC-ChJEPIMLIzYuHgUrvg"
     val CHANNEL_ID = "UCZNZj3mkdCGJfCoKyl4bSYQ"
+    var gelenVeri : PlayListData? = null
+    var oynatmaListeleri : List<PlayListData.Items>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +34,12 @@ class MainActivity : AppCompatActivity() {
 
                 Log.e("BASARILI",""+call?.request()?.url()?.toString())
 
-                for (i in 0..response?.body()?.items?.size!!-1){
-                    Log.e("BASARILI",""+response?.body()?.items?.get(0)?.snippet?.title?.toString())
-                }
+                gelenVeri = response?.body()
+                oynatmaListeleri = gelenVeri?.items
+
+
+                Log.e("basarili","toplam liste sayisi"+oynatmaListeleri?.size)
+
 
             }
 
