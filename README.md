@@ -1,6 +1,6 @@
 # Retrofit App
 
-![Screenshot](retrofit.jpg)
+![Screenshot](android.jpg)
 
 ## Projenin Amacı
 Retrofit kütüphanesinin kullanımını ve YouTube Api'nin projeye nasıl dahil edilip kullanılacağını hedefleyen bir projedir.
@@ -11,6 +11,7 @@ Kotlin dili ile geliştirilen Retrofit kütüphanesi ve YouTube Api kullanılan 
 
 
 # Retrofit Nedir ?
+![Screenshot](retrofit.jpg)
 Retrofit bir ağ kütüphanesidir. Temel amacı ağ üzerinden JSON verilerini sorunsuz bir şekilde alınmasını sağlamaktadır.
 JSON verilerini almakla birlikte, bir uygulama ile sunucu arasındaki tüm alışveriş işlemlerini yapabilir. 
 Retrofit, Volley kütüphanesinin yaptığı işlemleri yapar fakat Volley'den hız olarak daha öndedir. Volley kütüphanesindeki gibi
@@ -22,6 +23,7 @@ Retrofit - Volley karşılaştırması ile ilgili aşağıdaki yazıyı okuyabil
 [Is Retrofit faster than Volley?](https://medium.com/@ali.muzaffar/is-retrofit-faster-than-volley-the-answer-may-surprise-you-4379bc589d7c)
 
 # API Nedir ?
+![Screenshot](api.png)
 API (Application Programming Interface), bir uygulamaya ait yeteneklerin, başka bir uygulamada da kullanılabilmesi için, yeteneklerini paylaşan uygulamanın sağladığı arayüzdür. Bizde bu projede YouTube API'nin geliştiricilere sağladığı özellikleri
 kullanarak bir uygulama geliştireceğiz.
 
