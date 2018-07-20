@@ -30,6 +30,8 @@ Retrofit - Volley karşılaştırması ile ilgili aşağıdaki yazıyı okuyabil
 API (Application Programming Interface), bir uygulamaya ait yeteneklerin, başka bir uygulamada da kullanılabilmesi için, yeteneklerini paylaşan uygulamanın sağladığı arayüzdür. Bizde bu projede YouTube API'nin geliştiricilere sağladığı özellikleri
 kullanarak bir uygulama geliştireceğiz.
 
+<br>
+
 Öncelikle aşağıdaki linkten uygulamamızda kullanacağımız Api'nin gerekli düzenlemelerini yapacağız.
 
 https://console.developers.google.com/apis/
