@@ -32,6 +32,8 @@ kullanarak bir uygulama geliştireceğiz.
 
 <br>
 
+# API Ayarlarını Yapıyoruz 
+
 Öncelikle aşağıdaki linkten uygulamamızda kullanacağımız Api'nin gerekli düzenlemelerini yapacağız.
 
 https://console.developers.google.com/apis/
@@ -50,6 +52,27 @@ Uygulamamızda kullanacağımız örnekte herhangibir kanalın id değerini alar
 Herhangi bir kanalın video listelerine girip id değerini nasıl alırız onu aşağıdaki resimde görebilirsiniz :
 
 ![Screenshot](res2.png) <br>
+
+Yukarıdaki işlemleri yaptıktan sonra aşağıda bulunan **Excute** butonuna basarak işlemi başlatıyoruz.
+
+```java 
+ GET https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UC9IGkktBTEgUKzdWL_x2uUA&maxResults=15&key={YOUR_API_KEY}
+```
+ <br>
+ 
+Uygulamada kullanabilmek adına bizlere bir url verdi. Uygulamaya ait olan API KEY değerini projemizde kullanacağız.
+
+<p>
+  <img src="res5.png" width="700"  height="450">
+</p>
+
+<br>
+
+Yukarıdaki resimde uygulamaya ait bir API KEY değeri verildi. O değeri kullanacağınız. Uygulamanın kısıtlamaları yok 
+şeklinde işaretliyoruz. Uygulamanızı Play Store'a atmak isterseniz sadece Android Uygulamalar seçeneğini seçmelisiniz.
+
+
+
 
 
 
