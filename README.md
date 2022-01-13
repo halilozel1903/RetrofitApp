@@ -1,75 +1,97 @@
-# Retrofit App
+# Retrofit App use with YouTube Api 🎬
 
 ![Screenshot](android.jpg)
 
-## Projenin Amacı
-Retrofit kütüphanesinin kullanımını ve YouTube Api'nin projeye nasıl dahil edilip kullanılacağını hedefleyen bir projedir.
+## The goal of the project 🧑🏻‍💻
+It is a project targeting the use of Retrofit library and how to include and use YouTube Api in the project.
 
 
-## Projenin İçeriği
-Kotlin dili ile geliştirilen Retrofit kütüphanesi ve YouTube Api kullanılan bir uygulamadır. <br>
+## Content of the Project ℹ️
+It is an application that uses the Retrofit library and YouTube Api developed with Kotlin language. <br>
 
- <br>
 
-# Retrofit Nedir ?
+# What is Retrofit 🤨
 ![Screenshot](retrofit.jpg)
-Retrofit bir ağ kütüphanesidir. Temel amacı ağ üzerinden JSON verilerini sorunsuz bir şekilde alınmasını sağlamaktadır.
-JSON verilerini almakla birlikte, bir uygulama ile sunucu arasındaki tüm alışveriş işlemlerini yapabilir. 
-Retrofit, Volley kütüphanesinin yaptığı işlemleri yapar fakat Volley'den hız olarak daha öndedir. Volley kütüphanesindeki gibi
-JSON verilerini ayrıştırmak için herhangi bir JSON ayrıştırıcıya ihtiyaç yoktur. Web servisleri için gereken tüm özelliklere
-sahip olan çok güçlü bir kütüphanedir. 
+Retrofit is a network library. Its main purpose is to seamlessly receive JSON data over the network.
+Along with receiving JSON data, it can handle all exchanges between an application and a server.
+Retrofit does what the Volley library does, but it's faster than Volley. like in the volley library
+No JSON parser is needed to parse JSON data. All the features required for web services
+It is a very powerful library.
 
-Retrofit - Volley karşılaştırması ile ilgili aşağıdaki yazıyı okuyabilirsiniz : 
+You can read the article below about the Retrofit - Volley comparison:
 
 [Is Retrofit faster than Volley?](https://medium.com/@ali.muzaffar/is-retrofit-faster-than-volley-the-answer-may-surprise-you-4379bc589d7c)
 
-<br>
 
-# API Nedir ?
+# What is API ⁉️
 ![Screenshot](api.png) <br>
-API (Application Programming Interface), bir uygulamaya ait yeteneklerin, başka bir uygulamada da kullanılabilmesi için, yeteneklerini paylaşan uygulamanın sağladığı arayüzdür. Bizde bu projede YouTube API'nin geliştiricilere sağladığı özellikleri
-kullanarak bir uygulama geliştireceğiz.
+API (Application Programming Interface) is the interface provided by the application that shares its capabilities so that the capabilities of one application can be used in another application. In this project, we have the features that YouTube API provides to developers.
+We will develop an application using
 
-<br>
 
-# API Ayarlarını Yapıyoruz 
+# We Make API Settings ⚙️
 
-Öncelikle aşağıdaki linkten uygulamamızda kullanacağımız Api'nin gerekli düzenlemelerini yapacağız.
+First of all, we will make the necessary arrangements of the Api that we will use in our application from the link below.
 
 https://console.developers.google.com/apis/
 
-Linke girdikten sonra Api'leri ve Etkinlikleri Aktifleştir butonuna basarak uygulamada kullanılacak olan API'nin türünü
-seçeceğimiz sayfaya yönlendiriliyoruz. Kullanıcak uygulamayı seçerek aşağıdaki uygulamayı dene seçeneğine tıklıyoruz.
+After entering the link, press the Activate API's and Events button to select the type of API to be used in the application.
+We are directed to the page we will choose. By selecting the application to be used, we click on the option to try the application below.
 
 ![Screenshot](res1.png) <br>
 
-Uygulamayı denemek için bir sayfaya yönlendiriliyoruz.
+We are directed to a page to try the application.
 
 ![Screenshot](res3.png) <br>
 
-Uygulamamızda kullanacağımız örnekte herhangibir kanalın id değerini alarak onun oynatma listelerine ulaşacağız. Snippet seçeneğini kullanıyoruz. Kanala tüm bilgilere ulaşmamızı sağlamaktadır. Kanaldan çekeceğimiz maksimum veriyi belirttik.
+In the example we will use in our application, we will get the id value of any channel and reach its playlists. We use the snippet option. It allows us to access all the information on the channel. We have specified the maximum data we will pull from the channel.
 
-Herhangi bir kanalın video listelerine girip id değerini nasıl alırız onu aşağıdaki resimde görebilirsiniz :
+You can see how we can enter the video lists of any channel and get the id value in the picture below:
 
 ![Screenshot](res2.png) <br>
 
-Yukarıdaki işlemleri yaptıktan sonra aşağıda bulunan **Excute** butonuna basarak işlemi başlatıyoruz.
+After performing the above operations, we start the process by pressing the **Excute** button below.
 
 ```java 
  GET https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UC9IGkktBTEgUKzdWL_x2uUA&maxResults=15&key={YOUR_API_KEY}
 ```
  <br>
  
-Uygulamada kullanabilmek adına bizlere bir url verdi. Uygulamaya ait olan API KEY değerini projemizde kullanacağız.
+He gave us a url to use in the application. We will use the API KEY value belonging to the application in our project.
 
 <p>
-  <img src="res5.png" width="700"  height="450">
+   <img src="res5.png" width="700" height="450">
 </p>
 
 <br>
 
-Yukarıdaki resimde uygulamaya ait bir API KEY değeri verildi. O değeri kullanacağınız. Uygulamanın kısıtlamaları yok 
-şeklinde işaretliyoruz. Uygulamanızı Play Store'a atmak isterseniz sadece Android Uygulamalar seçeneğini seçmelisiniz.
+In the picture above, an API KEY value of the application is given. You will use that value. The app has no restrictions
+We mark as. If you want to throw your application to the Play Store, you should only select the Android Applications option.
+
+## License ℹ️
+```
+MIT License
+
+Copyright (c) 2022 Halil OZEL
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 
 
