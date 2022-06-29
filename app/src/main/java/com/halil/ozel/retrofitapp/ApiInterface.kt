@@ -14,5 +14,4 @@ interface ApiInterface {
         @Query("key") apiKey: String,
         @Query("maxResults") limit: Int
     ): Call<PlayListData>
-
 }

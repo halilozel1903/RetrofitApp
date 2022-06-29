@@ -42,8 +42,5 @@ class PlayListAdapter(allPlayList: List<PlayListData.Items>?) :
             Picasso.get().load(currentCreateList?.snippet?.thumbnails?.high?.url)
                 .into(playListPhoto)
         }
-
     }
-
-
 }
