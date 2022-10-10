@@ -20,8 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val apiInterface =
-            ApiClient.client?.create(ApiInterface::class.java)
+        val apiInterface = ApiClient.client?.create(ApiInterface::class.java)
         val apiCall = apiInterface?.getList(Companion.CHANNEL_ID, Companion.API_KEY, 20)
 
         apiCall?.enqueue(object : Callback<PlayListData> {
@@ -30,20 +29,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onResponse(
-                call: Call<PlayListData>,
-                response: Response<PlayListData>
+                call: Call<PlayListData>, response: Response<PlayListData>
             ) {
                 data = response.body()
                 playList = data?.items
                 myAdapter = PlayListAdapter(playList)
                 recyclerviewPlaylist.adapter = myAdapter
 
-                val myLayoutManager =
-                    LinearLayoutManager(
-                        this@MainActivity,
-                        LinearLayoutManager.VERTICAL,
-                        false
-                    )
+                val myLayoutManager = LinearLayoutManager(
+                    this@MainActivity, LinearLayoutManager.VERTICAL, false
+                )
                 recyclerviewPlaylist.layoutManager = myLayoutManager
 
                 supportActionBar?.subtitle = "Toplam Liste : " + playList?.size
