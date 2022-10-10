@@ -24,9 +24,9 @@ class PlayListAdapter(allPlayList: List<PlayListData.Items>?) :
         return PlaylistViewHolder(oneLinePlaylist)
     }
 
-    override fun onBindViewHolder(p0: PlaylistViewHolder, p1: Int) {
-        val currentList = playList?.get(p1)
-        p0.setData(currentList, p1)
+    override fun onBindViewHolder(playListViewHolder: PlaylistViewHolder, position: Int) {
+        val currentList = playList?.get(position)
+        playListViewHolder.setData(currentList)
     }
 
 
@@ -37,7 +37,7 @@ class PlayListAdapter(allPlayList: List<PlayListData.Items>?) :
         private var playListTitle = oneLineList.tvListeBaslik
         private var playListPhoto = oneLineList.circleResim
 
-        fun setData(currentCreateList: PlayListData.Items?, pos: Int) {
+        fun setData(currentCreateList: PlayListData.Items?) {
             playListTitle.text = currentCreateList?.snippet?.title
             Picasso.get().load(currentCreateList?.snippet?.thumbnails?.high?.url)
                 .into(playListPhoto)
