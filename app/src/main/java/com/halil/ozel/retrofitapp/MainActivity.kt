@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
                 recyclerviewPlaylist.layoutManager = myLayoutManager
 
                 supportActionBar?.subtitle = "Toplam Liste : " + playList?.size
-
             }
         })
     }

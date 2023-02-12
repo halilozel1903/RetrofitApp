@@ -20,7 +20,6 @@ class PlayListAdapter(allPlayList: List<PlayListData.Items>?) :
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): PlaylistViewHolder {
         val inflater = LayoutInflater.from(p0.context)
         val oneLinePlaylist = inflater.inflate(R.layout.tek_satir_playlist, p0, false)
-
         return PlaylistViewHolder(oneLinePlaylist)
     }
 
