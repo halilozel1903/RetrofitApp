@@ -10,7 +10,7 @@ It is a project targeting the use of Retrofit library and how to include and use
 It is an application that uses the Retrofit library and YouTube Api developed with Kotlin language. <br>
 
 
-# What is Retrofit 🤨
+# What is Retrofit? 🤨
 ![Screenshot](retrofit.jpg)
 Retrofit is a network library. Its main purpose is to seamlessly receive JSON data over the network.
 Along with receiving JSON data, it can handle all exchanges between an application and a server.
